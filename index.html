@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayesha Ashraf | Social Media Strategist & Content Creator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --primary: #C73E1D;
+            --primary-light: #E85D3E;
+            --primary-dark: #A03015;
+            --secondary: #1A1A1A;
+            --accent: #FF6B4A;
+            --bg: #FAFAFA;
+            --card-bg: #FFFFFF;
+            --text: #2D2D2D;
+            --text-light: #666666;
+            --border: #E5E5E5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.9rem;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color 0.3s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #FFF5F3 0%, #FFFFFF 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            right: -5%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(199, 62, 29, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h3 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+        }
+
+        .hero-content h1 span {
+            color: var(--primary);
+            display: block;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(199, 62, 29, 0.3);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(199, 62, 29, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(199, 62, 29, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .hero-img {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            background: #f0f0f0;
+        }
+
+        .hero-img:hover {
+            transform: translateY(-5px);
+        }
+
+        .hero-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-img.large {
+            grid-row: span 2;
+            height: 400px;
+        }
+
+        .hero-img.small {
+            height: 190px;
+        }
+
+        .floating-card {
+            position: absolute;
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .floating-card.years {
+            top: 10%;
+            right: -20px;
+            animation-delay: 0s;
+        }
+
+        .floating-card.camera {
+            bottom: 10%;
+            left: -20px;
+            animation-delay: 2s;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: rgba(199, 62, 29, 0.1);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Experience Overview */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .exp-card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .exp-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+
+        .exp-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+        }
+
+        .exp-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .exp-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(199, 62, 29, 0.1);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .exp-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .exp-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            margin-top: 1rem;
+            list-style: none;
+        }
+
+        .skills-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .skills-list li::before {
+            content: '→';
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Campaigns Section */
+        .campaigns {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .campaigns .section-title {
+            color: white;
+        }
+
+        .campaigns .section-subtitle {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .campaign-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+        }
+
+        .campaign-card:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateY(-5px);
+        }
+
+        .campaign-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .campaign-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .campaign-subtitle {
+            color: var(--primary-light);
+            font-size: 1.1rem;
+        }
+
+        .campaign-date {
+            background: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .campaign-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .campaign-col h4 {
+            color: var(--primary-light);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .campaign-col ul {
+            list-style: none;
+        }
+
+        .campaign-col ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+        }
+
+        .campaign-col ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .campaign-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .campaign-img {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 250px;
+            background: rgba(255,255,255,0.1);
+            position: relative;
+        }
+
+        .campaign-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+            display: block;
+        }
+
+        .campaign-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-light);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+            margin-top: 0.3rem;
+        }
+
+        /* Events & Activations */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .event-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .event-img {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            background: #f0f0f0;
+        }
+
+        .event-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+            display: block;
+        }
+
+        .event-card:hover .event-img img {
+            transform: scale(1.05);
+        }
+
+        .event-content {
+            padding: 2rem;
+        }
+
+        .event-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .event-content p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .event-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: rgba(199, 62, 29, 0.1);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Design & Ads Section */
+        .design-showcase {
+            background: linear-gradient(to bottom, #FFF5F3 0%, #FFFFFF 100%);
+        }
+
+        .design-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .design-item {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .design-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .design-img {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            background: #f0f0f0;
+        }
+
+        .design-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+            display: block;
+        }
+
+        .design-item:hover .design-img img {
+            transform: scale(1.05);
+        }
+
+        .design-info {
+            padding: 1.5rem;
+        }
+
+        .design-info h4 {
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+
+        .design-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Tools Section */
+        .tools {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .tool-badge {
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--secondary);
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .tool-badge:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .tool-badge i {
+            color: var(--primary);
+        }
+
+        /* Content Creation */
+        .creator-section {
+            background: var(--secondary);
+            color: white;
+            text-align: center;
+        }
+
+        .creator-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .creator-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 3rem 2rem;
+            border-radius: 24px;
+            transition: all 0.3s;
+        }
+
+        .creator-card:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-10px);
+        }
+
+        .creator-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+        }
+
+        .creator-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .creator-card p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #FFF5F3 0%, #FFFFFF 100%);
+            text-align: center;
+        }
+
+        .contact-statement {
+            font-size: 2rem;
+            font-weight: 700;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.4;
+            color: var(--secondary);
+        }
+
+        .roles {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .role-badge {
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            transition: all 0.3s;
+        }
+
+        .role-badge:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-light);
+        }
+
+        .contact-item i {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-item a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-text {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-visual {
+                order: -1;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .experience-grid,
+            .campaign-grid,
+            .events-grid,
+            .design-grid,
+            .creator-features {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Image Error Handling */
+        img {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+            min-height: 200px;
+            position: relative;
+        }
+
+        img::after {
+            content: 'Loading...';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #999;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i data-lucide="aperture"></i>
+                Ayesha Ashraf
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#campaigns">Campaigns</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#design">Design</a></li>
+                <li><a href="https://www.linkedin.com/in/ashbrooks123" target="_blank">LinkedIn</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-container">
+            <div class="hero-content fade-in">
+                <div class="hero-badge">
+                    <i data-lucide="award" style="width: 18px; height: 18px;"></i>
+                    3+ Years Experience
+                </div>
+                <h3>Hello, I'm</h3>
+                <h1>Ayesha <span>Ashraf</span></h1>
+                <p class="hero-description">
+                    I build digital narratives, manage multi-platform strategies, and bring stories to life both behind and in front of the camera. Specializing in end-to-end Social Media Management for beauty and lifestyle brands.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#campaigns" class="btn btn-primary">
+                        View My Work
+                        <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ashbrooks123" target="_blank" class="btn btn-secondary">
+                        <i data-lucide="linkedin" style="width: 18px; height: 18px;"></i>
+                        LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual fade-in">
+                <div class="hero-image-grid">
+                    <div class="hero-img large">
+                        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&h=800&fit=crop" alt="Photography Setup">
+                    </div>
+                    <div class="hero-img small">
+                        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=300&fit=crop" alt="Tech Workspace">
+                    </div>
+                    <div class="hero-img small">
+                        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400&h=300&fit=crop" alt="Sunset Photography">
+                    </div>
+                </div>
+                <div class="floating-card years">
+                    <i data-lucide="trending-up"></i>
+                    Social Media Expert
+                </div>
+                <div class="floating-card camera">
+                    <i data-lucide="camera"></i>
+                    Content Creator
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Strategic Social Media Management</span>
+                <h2 class="section-title">Ayesha Ashraf (2022 - Present)</h2>
+                <p class="section-subtitle">End-to-end social media management including strategic planning, content creation, community building, and analytics.</p>
+            </div>
+
+            <div class="experience-grid">
+                <div class="exp-card fade-in">
+                    <div class="exp-icon">
+                        <i data-lucide="target" style="width: 30px; height: 30px;"></i>
+                    </div>
+                    <h3>Strategic Planning</h3>
+                    <p>Developed and executed content calendars aligned with brand goals and clean beauty narratives.</p>
+                </div>
+
+                <div class="exp-card fade-in">
+                    <div class="exp-icon">
+                        <i data-lucide="video" style="width: 30px; height: 30px;"></i>
+                    </div>
+                    <h3>Content Creation</h3>
+                    <p>Scripted, shot and edited over 100+ reels and 10+ campaigns for maximum engagement.</p>
+                </div>
+
+                <div class="exp-card fade-in">
+                    <div class="exp-icon">
+                        <i data-lucide="users" style="width: 30px; height: 30px;"></i>
+                    </div>
+                    <h3>Community Building</h3>
+                    <p>Hosted live sessions and interactive stories to engage the audience and build brand loyalty.</p>
+                </div>
+
+                <div class="exp-card fade-in">
+                    <div class="exp-icon">
+                        <i data-lucide="bar-chart-2" style="width: 30px; height: 30px;"></i>
+                    </div>
+                    <h3>Analytics</h3>
+                    <p>Monitored performance metrics to refine strategies and optimize content performance.</p>
+                </div>
+
+                <div class="exp-card fade-in" style="grid-column: span 2;">
+                    <div class="exp-icon">
+                        <i data-lucide="sparkles" style="width: 30px; height: 30px;"></i>
+                    </div>
+                    <h3>Additional Creative Contributions</h3>
+                    <ul class="skills-list">
+                        <li>Script Writing</li>
+                        <li>Influencer Collaborations</li>
+                        <li>Videography</li>
+                        <li>Photography</li>
+                        <li>Shoot Management</li>
+                        <li>Prop Sourcing</li>
+                        <li>Art Direction</li>
+                        <li>Ad Creation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campaigns Section -->
+    <section class="campaigns" id="campaigns">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag" style="background: rgba(255,255,255,0.1); color: white;">Portfolio</span>
+                <h2 class="section-title">Scroll-Stopping Campaigns</h2>
+                <p class="section-subtitle">Strategic campaigns that sparked engagement and drove results for  Webix solutions.</p>
+            </div>
+
+            <!-- Campaign 1: Founder Conversations -->
+            <div class="campaign-card fade-in">
+                <div class="campaign-header">
+                    <div>
+                        <h3 class="campaign-title">Founder-to-Founder Conversations</h3>
+                        <p class="campaign-subtitle">"Clean Talks with Naina Kuhail"</p>
+                    </div>
+                    <span class="campaign-date">Brand Campaign</span>
+                </div>
+                
+                <div class="campaign-grid">
+                    <div class="campaign-col">
+                        <h4><i data-lucide="lightbulb" style="width: 18px;"></i> The Idea</h4>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; margin-bottom: 1rem;">
+                            A founder-led video series exploring clean beauty narratives via real, unscripted conversations by connecting with industry experts.
+                        </p>
+                        <h4><i data-lucide="target" style="width: 18px;"></i> Objective</h4>
+                        <ul>
+                            <li>Double-brand visibility</li>
+                            <li>Build authentic engagement</li>
+                            <li>Spark conversations on clean beauty</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="campaign-col">
+                        <h4><i data-lucide="user" style="width: 18px;"></i> My Role</h4>
+                        <ul>
+                            <li>Concept & format creation</li>
+                            <li>Brand guest outreach</li>
+                            <li>Question scripting</li>
+                            <li>Shoot setup & direction</li>
+                            <li>Editing BTS plan</li>
+                            <li>Posting & rollout</li>
+                        </ul>
+                    </div>
+
+                    <div class="campaign-col">
+                        <h4><i data-lucide="layout" style="width: 18px;"></i> Content Overview</h4>
+                        <ul>
+                            <li>One episode video</li>
+                            <li>One BTS Reel</li>
+                            <li>Weekly Rollouts</li>
+                            <li>Founder Insights Fun Activity per episode</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="campaign-images">
+                    <div class="campaign-img">
+                        <img src="https://lh3.googleusercontent.com/d/1U5qkALW4O0zHS15rP36XogKkNIo6Pf2w" alt="Campaign Visual 1" onerror="this.style.display='none'">
+                    </div>
+                    <div class="campaign-img">
+                        <img src="https://lh3.googleusercontent.com/d/1byOcCbBGP6NCxaVTDnKWwTfzniqDnCX3" alt="Campaign Visual 2" onerror="this.style.display='none'">
+                    </div>
+                    <div class="campaign-img">
+                        <img src="https://lh3.googleusercontent.com/d/1T9cxrRcgni864d5ZVA_zIq918Q5p1szK" alt="Campaign Visual 3" onerror="this.style.display='none'">
+                    </div>
+                    <div class="campaign-img">
+                        <img src="https://lh3.googleusercontent.com/d/1GgLRuTix-QKp6rXAUQ67TbU1qcCj7cLR" alt="Campaign Visual 4" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campaign 2: Diwali -->
+            <div class="campaign-card fade-in">
+                <div class="campaign-header">
+                    <div>
+                        <h3 class="campaign-title">Diwali Story Campaign</h3>
+                        <p class="campaign-subtitle">Fluid Beauty & Self-Expression</p>
+                    </div>
+                    <span class="campaign-date">Festival Campaign</span>
+                </div>
+
+                <div class="campaign-grid">
+                    <div class="campaign-col">
+                        <h4><i data-lucide="heart" style="width: 18px;"></i> The Idea</h4>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; margin-bottom: 1rem;">
+                            A heartfelt Diwali story exploring identity and self-expression through the lens of a young boy, normalizing fluid beauty and nurturing emotional connection.
+                        </p>
+                    </div>
+                    
+                    <div class="campaign-col">
+                        <h4><i data-lucide="user" style="width: 18px;"></i> My Role</h4>
+                        <ul>
+                            <li>Scriptwriting (Narrative, dialogue, voiceover)</li>
+                            <li>Art Direction (Scene setups, props, styling)</li>
+                            <li>Studio Booking & Shoot Management</li>
+                            <li>Casting & Talent Coordination</li>
+                            <li>Voiceover (Written & recorded)</li>
+                            <li>Posting Strategy & Rollout</li>
+                        </ul>
+                    </div>
+
+                    <div class="campaign-col">
+                        <h4><i data-lucide="trending-up" style="width: 18px;"></i> Key Stats</h4>
+                        <div class="stats-row" style="border: none; padding: 0; margin-top: 0;">
+                            <div class="stat-item">
+                                <span class="stat-number">110K+</span>
+                                <span class="stat-label">Views</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">14H+</span>
+                                <span class="stat-label">Watch Time</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">5.5K</span>
+                                <span class="stat-label">Interactions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campaign 3: Anniversary -->
+            <div class="campaign-card fade-in">
+                <div class="campaign-header">
+                    <div>
+                        <h3 class="campaign-title">Webix solutions Anniversary 2024</h3>
+                        <p class="campaign-subtitle">"Vanity Turns 6!" - Week Long Engagement Series</p>
+                    </div>
+                    <span class="campaign-date">Milestone Campaign</span>
+                </div>
+
+                <div class="campaign-grid">
+                    <div class="campaign-col">
+                        <h4><i data-lucide="zap" style="width: 18px;"></i> The Idea</h4>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; margin-bottom: 1rem;">
+                            High energy campaign celebrating Webix solutions's 6-year milestone, featuring new launches, nostalgia, and community engagement while promoting the Big Bang Beauty Sale.
+                        </p>
+                    </div>
+                    
+                    <div class="campaign-col" style="grid-column: span 2;">
+                        <h4><i data-lucide="user" style="width: 18px;"></i> My Role</h4>
+                        <ul>
+                            <li>Developed campaign themes and moodboards</li>
+                            <li>Scripted and directed Anniversary Ad shoot</li>
+                            <li>Conceptualized and executed Anniversary Bellebox shoot</li>
+                            <li>Created and managed buzz content (announcement reels, carousels, giveaways)</li>
+                            <li>Planned new brand launch rollouts</li>
+                            <li>Designed and executed six-brand mega giveaway</li>
+                            <li>Engaged community through captions, DMs, and story prompts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campaign 4: Nakhrewali -->
+            <div class="campaign-card fade-in">
+                <div class="campaign-header">
+                    <div>
+                        <h3 class="campaign-title">Webix solutions x Nakhrewali</h3>
+                        <p class="campaign-subtitle">Custom Bridesmaid Boxes</p>
+                    </div>
+                    <span class="campaign-date">Collaboration</span>
+                </div>
+
+                <div class="campaign-grid">
+                    <div class="campaign-col">
+                        <h4><i data-lucide="gift" style="width: 18px;"></i> The Idea</h4>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; margin-bottom: 1rem;">
+                            Collaboration resulting in two bridesmaid gift boxes celebrating the sass and glam of desi wedding season. Created quirky names: "The Desi Girl" & "The Mysterious Kuddi".
+                        </p>
+                    </div>
+                    
+                    <div class="campaign-col">
+                        <h4><i data-lucide="user" style="width: 18px;"></i> My Role</h4>
+                        <ul>
+                            <li>Led visual direction for shoot + styling</li>
+                            <li>Created box names</li>
+                            <li>Shot and edited 2 product reveal reels</li>
+                            <li>Managed website listings & e-comm photoshoots</li>
+                            <li>Planned content rollout strategy</li>
+                            <li>Shot founder rapid fire reel for pre-buzz</li>
+                        </ul>
+                    </div>
+
+                    <div class="campaign-col">
+                        <h4><i data-lucide="bar-chart" style="width: 18px;"></i> Performance</h4>
+                        <ul>
+                            <li>20K+ total views</li>
+                            <li>Saved 40+ times collectively</li>
+                            <li>Helped test market for bridal-focused boxes</li>
+                            <li>Initiated B2B interest for partnerships</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="stat-number">20K+</span>
+                        <span class="stat-label">Total Views</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">40+</span>
+                        <span class="stat-label">Saves</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Reel Variants</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">High</span>
+                        <span class="stat-label">Engagement</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Offline Activations</span>
+                <h2 class="section-title">Bringing Clean Beauty to Life</h2>
+                <p class="section-subtitle">Strengthening brand presence through on-ground engagements across retail giants.</p>
+            </div>
+
+            <div class="events-grid">
+                <div class="event-card fade-in">
+                    <div class="event-img">
+                        <img src="https://lh3.googleusercontent.com/d/1quNX86cPZGCltoSN7XATObTyXdX6Wa-D" alt="Event Photography" onerror="this.style.display='none'">
+                    </div>
+                    <div class="event-content">
+                        <h3>Retail Activations</h3>
+                        <p>Led on-ground brand representation for Webix solutions across retail giants like Lulu Hypermarket and Shoppers Stop in cities including Delhi, Pune, Lucknow, Chennai, and Indore.</p>
+                        <div class="event-tags">
+                            <span class="tag">Event Coordination</span>
+                            <span class="tag">Brand Representation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card fade-in">
+                    <div class="event-img">
+                        <img src="https://lh3.googleusercontent.com/d/1mwzeLxAA9XJzy-N4-JHcMMNUQroiLCFu" alt="Influencer Event" onerror="this.style.display='none'">
+                    </div>
+                    <div class="event-content">
+                        <h3>Store Launch Events</h3>
+                        <p>End-to-end event coordination and execution including influencer onboarding, on-ground brand communication, and curating experience zones in-store.</p>
+                        <div class="event-tags">
+                            <span class="tag">Influencer Management</span>
+                            <span class="tag">Experience Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 3rem; border-radius: 24px; color: white; text-align: center;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">My Role in Events</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem; text-align: left;">
+                    <div style="display: flex; align-items: start; gap: 1rem;">
+                        <i data-lucide="check-circle" style="min-width: 24px; margin-top: 4px;"></i>
+                        <div>
+                            <h4 style="margin-bottom: 0.5rem;">End-to-end Coordination</h4>
+                            <p style="opacity: 0.9; font-size: 0.95rem;">Complete event planning and execution management</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: start; gap: 1rem;">
+                        <i data-lucide="check-circle" style="min-width: 24px; margin-top: 4px;"></i>
+                        <div>
+                            <h4 style="margin-bottom: 0.5rem;">Influencer Management</h4>
+                            <p style="opacity: 0.9; font-size: 0.95rem;">Onboarding and briefing for event coverage</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: start; gap: 1rem;">
+                        <i data-lucide="check-circle" style="min-width: 24px; margin-top: 4px;"></i>
+                        <div>
+                            <h4 style="margin-bottom: 0.5rem;">Content Creation</h4>
+                            <p style="opacity: 0.9; font-size: 0.95rem;">Real-time content during events for social amplification</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design & Ads Section -->
+    <section class="design-showcase" id="design">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Quick-Turn Campaigns</span>
+                <h2 class="section-title">Social Ads & Product Shoots</h2>
+                <p class="section-subtitle">Conceptualized, shot and edited high-performing short-form ads tailored for Instagram, Facebook, and Meta Ads.</p>
+            </div>
+
+            <div class="design-grid">
+                <div class="design-item fade-in">
+                    <div class="design-img">
+                        <img src="https://lh3.googleusercontent.com/d/14XVyL0-M-OQ7l9EGuS3JcAgCLlHg5KOl" alt="Flash Sale Ads" onerror="this.style.display='none'">
+                    </div>
+                    <div class="design-info">
+                        <h4>Flash Sale Ads</h4>
+                        <p>High-conversion sale creatives with urgent CTAs</p>
+                    </div>
+                </div>
+                <div class="design-item fade-in">
+                    <div class="design-img">
+                        <img src="https://lh3.googleusercontent.com/d/1ZgA6OmnVwbveFqtpg8V2k9Olr40Wz9X6" alt="Website Listings" onerror="this.style.display='none'">
+                    </div>
+                    <div class="design-info">
+                        <h4>Website Listings</h4>
+                        <p>E-commerce optimized product photography</p>
+                    </div>
+                </div>
+                <div class="design-item fade-in">
+                    <div class="design-img">
+                        <img src="https://lh3.googleusercontent.com/d/1iSlnL4iItdxQf8MJoW4vOT6bKzUqtZQs" alt="Social Video Ads" onerror="this.style.display='none'">
+                    </div>
+                    <div class="design-info">
+                        <h4>Social Video Ads</h4>
+                        <p>Multi-platform versions for maximum reach</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem;">
+                <h3 style="text-align: center; font-size: 1.8rem; margin-bottom: 1rem;">Design Skills in Action</h3>
+                <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem;">Strategic creatives crafted for digital impact using modern tools.</p>
+                
+                <div class="tools">
+                    <div class="tool-badge fade-in">
+                        <i data-lucide="pen-tool"></i>
+                        Canva
+                    </div>
+                    <div class="tool-badge fade-in">
+                        <i data-lucide="video"></i>
+                        VN Editor
+                    </div>
+                    <div class="tool-badge fade-in">
+                        <i data-lucide="smartphone"></i>
+                        Instagram Edits
+                    </div>
+                    <div class="tool-badge fade-in">
+                        <i data-lucide="camera"></i>
+                        Lightroom
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Creation Section -->
+    <section class="creator-section" id="creator">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag" style="background: rgba(255,255,255,0.1); color: white;">Behind the Camera</span>
+                <h2 class="section-title" style="color: white;">Creating for the Feed</h2>
+                <p class="section-subtitle">Me as a Content Creator - Seamless workflows and authentic storytelling.</p>
+            </div>
+
+            <div class="creator-features">
+                <div class="creator-card fade-in">
+                    <div class="creator-icon">
+                        <i data-lucide="scissors" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>Seamless Shooting & Editing</h3>
+                    <p>End-to-end workflow from concept to final cut, ensuring high-quality output optimized for each platform.</p>
+                </div>
+
+                <div class="creator-card fade-in">
+                    <div class="creator-icon">
+                        <i data-lucide="film" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>End-to-End Production</h3>
+                    <p>Handling everything from scripting to post-production, including voiceover and strategic posting schedules.</p>
+                </div>
+
+                <div class="creator-card fade-in">
+                    <div class="creator-icon">
+                        <i data-lucide="trending-up" style="width: 32px; height: 32px;"></i>
+                    </div>
+                    <h3>Strategic Post-Production</h3>
+                    <p>Editing with platform trends in mind, ensuring maximum engagement and shareability.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 4rem; background: rgba(255,255,255,0.05); padding: 3rem; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1);">
+                <h3 style="font-size: 1.5rem; margin-bottom: 2rem; text-align: center;">Creator Strengths</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; text-align: center;">
+                    <div>
+                        <i data-lucide="video" style="color: var(--primary-light); margin-bottom: 0.5rem;"></i>
+                        <p>On-camera comfort & styling</p>
+                    </div>
+                    <div>
+                        <i data-lucide="mic" style="color: var(--primary-light); margin-bottom: 0.5rem;"></i>
+                        <p>Voiceover scripting + delivery</p>
+                    </div>
+                    <div>
+                        <i data-lucide="sparkles" style="color: var(--primary-light); margin-bottom: 0.5rem;"></i>
+                        <p>Trend adaptation with clean beauty voice</p>
+                    </div>
+                    <div>
+                        <i data-lucide="book-open" style="color: var(--primary-light); margin-bottom: 0.5rem;"></i>
+                        <p>Engaging storytelling for Reels & Stories</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; font-style: italic; font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">
+                "I create because I believe the best way to build connection is to show up, as yourself, and for your audience."
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="fade-in">
+                <p class="contact-statement">
+                    I don't just manage content, I build narratives. From scroll-stopping reels to campaign strategy, I bring ideas to life both behind and in front of the camera.
+                </p>
+
+                <div class="roles">
+                    <div class="role-badge">
+                        <i data-lucide="target" style="width: 18px; height: 18px;"></i>
+                        Strategist
+                    </div>
+                    <div class="role-badge">
+                        <i data-lucide="video" style="width: 18px; height: 18px;"></i>
+                        Creator
+                    </div>
+                    <div class="role-badge">
+                        <i data-lucide="pen-tool" style="width: 18px; height: 18px;"></i>
+                        Writer
+                    </div>
+                    <div class="role-badge">
+                        <i data-lucide="palette" style="width: 18px; height: 18px;"></i>
+                        Designer
+                    </div>
+                </div>
+
+                <h2 style="font-size: 4rem; color: var(--primary); margin-bottom: 3rem; font-family: 'Playfair Display', serif;">Let's Connect</h2>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i data-lucide="mail"></i>
+                        <div>
+                            <p style="font-size: 0.9rem; margin-bottom: 0.2rem;">Email</p>
+                            <a href="mailto:freelancerayeshaashraf@gmail.com">freelancerayeshaashraf@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i data-lucide="linkedin"></i>
+                        <div>
+                            <p style="font-size: 0.9rem; margin-bottom: 0.2rem;">LinkedIn</p>
+                            <a href="https://www.linkedin.com/in/ashbrooks123" target="_blank">linkedin.com/in/ashbrooks123</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i data-lucide="phone"></i>
+                        <div>
+                            <p style="font-size: 0.9rem; margin-bottom: 0.2rem;">Phone</p>
+                            <a href="tel:+923276869377">+92 327 6869377</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i data-lucide="message-circle"></i>
+                        <div>
+                            <p style="font-size: 0.9rem; margin-bottom: 0.2rem;">WhatsApp</p>
+                            <a href="https://wa.me/923276869377">+92 327 6869377</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 4rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="mailto:freelancerayeshaashraf@gmail.com" class="btn btn-primary" style="padding: 1.2rem 3rem; font-size: 1.1rem;">
+                        Start a Project
+                        <i data-lucide="arrow-right" style="width: 20px; height: 20px;"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ashbrooks123" target="_blank" class="btn btn-secondary" style="padding: 1.2rem 3rem; font-size: 1.1rem;">
+                        <i data-lucide="linkedin" style="width: 20px; height: 20px;"></i>
+                        View LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="footer-text">© 2026 Ayesha Ashraf. All rights reserved. Crafted with passion for digital storytelling.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '100%';
+            navLinks.style.left = '0';
+            navLinks.style.width = '100%';
+            navLinks.style.background = 'white';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.padding = '2rem';
+            navLinks.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+        }
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.style.boxShadow = '0 2px 30px rgba(0,0,0,0.1)';
+                navbar.style.padding = '0.5rem 0';
+            } else {
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.05)';
+                navbar.style.padding = '1rem 0';
+            }
+        });
+
+        // Intersection Observer for Fade-in Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
